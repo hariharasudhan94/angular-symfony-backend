@@ -1,0 +1,20 @@
+AngularBundle\Document\User:
+    fields:
+        id:
+            id: true
+        name:
+            type: string
+        email:
+            type: string
+        phone:
+            type: string
+        gender:
+            type: string
+        createdAt:
+            type: date
+        updatedAt:
+            type: date
+        isActive:
+            type: boolean
+    lifecycleCallbacks:
+        prePersist: [ doStuffBeforePersisting ]

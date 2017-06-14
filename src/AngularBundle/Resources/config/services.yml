@@ -1,0 +1,18 @@
+parameters:
+    #angular_base_injector: angular.base_injector_service
+    angular_user_object: AngularBundle\Document\User
+        
+services:
+    angular.base_injector_service:
+        abstract: true 
+        arguments:
+            - @doctrine.odm.mongodb.document_manager
+            - @jms_serializer
+            
+    angular.user_handler:
+        class: AngularBundle\Handler\UserHandler
+        parent: angular.base_injector_service
+        #arguments:
+        #    - @angular.base_injector_service
+        #    - '%angular_user_object%'
+            

@@ -1,0 +1,19 @@
+AngularBundle\Document\User:
+    constraints:
+        - Doctrine\Bundle\MongoDBBundle\Validator\Constraints\Unique:
+            fields: [ email ]
+            message: Email Already Taken
+    properties:
+        name:
+            - NotBlank:
+                message: Name Must Not Be Empty
+        email:
+            - NotBlank:
+                message: Email Must Not Be Empty
+        phone:
+            - NotBlank:
+                message: Phone Number Must Not Be Empty
+        gender:
+            - NotNull:
+                message: Invalid Gender
+        

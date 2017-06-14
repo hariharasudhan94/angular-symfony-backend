@@ -1,0 +1,28 @@
+AngularBundle\Document\User:
+    #tells the serializer to skip all properties which have not marked with @Expose
+    exclusion_policy: ALL
+    #xml_root_name: file
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [ list, details ]
+        name:
+            expose: true
+            type: string
+            groups: [ list, details ]
+        email:
+            expose: true
+            type: string
+            groups: [ list, details ]
+        gender:
+            expose: true
+            type: string
+            groups: [ details ]
+        phone:
+            expose: true
+            type: string
+            groups: [ list, details ]
+
+        
+        

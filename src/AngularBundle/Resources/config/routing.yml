@@ -1,0 +1,8 @@
+angular_homepage:
+    path:     /
+    defaults: { _controller: AngularBundle:Default:index }
+    
+users:
+    type: rest
+    prefix: /api/v1/
+    resource: AngularBundle\Controller\UserController
